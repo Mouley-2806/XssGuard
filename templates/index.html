@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XssGuard</title>
+</head>
+<body>
+    <header>
+        <h1>XssGuard</h1>
+    </header>
+    <main>
+        <h2>Context-Aware XSS Detection</h2>
+        <p>
+            A security project for analyzing
+            cross-site scripting risks.
+        </p>
+       <form method="POST" action="/submit">
+    <!-- 1. Text Input -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username">
+    <br><br>
+    <!-- 2. Dropdown -->
+    <label for="category">Category:</label>
+<select id="category" name="category">
+    <option value="general">General</option>
+    <option value="security">Security</option>
+    <option value="testing">Testing</option>
+</select>
+<br><br>
+    <!-- 3. Checkbox -->
+   <label for="agree">I understand this is a security testing tool:</label>
+<input type="checkbox" id="agree" name="agree">
+<br><br>
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+</form>
+    </main>
+    <footer>
+        <p>XSSGuard - Day 1</p>
+    </footer>
+</body>
+</html>
