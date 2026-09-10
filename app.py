@@ -8,8 +8,9 @@ def home():
 
 @app.route("/submit", methods=["POST"])
 def submit():
-    user_input = request.form["user_input"]
-    return render_template("result.html", user_input=user_input)
+    username = request.form["username"]
+    print(username)
+    return render_template("result.html", user_input=username)
 
 @app.route("/search", methods=["GET"])
 def search():
