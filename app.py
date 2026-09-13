@@ -6,9 +6,9 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/submit", methods=["GET"])
+@app.route("/submit", methods=["POST"])
 def submit():
-    username = request.args["username"]
+    username = request.form["username"]
     print(username)
     return render_template("result.html", user_input=username)
 
