@@ -18,13 +18,13 @@ def search():
     query = request.args.get("q")
     print("Query parameter:", query)
     response = make_response(f"You searched for: {query}")
-    response.headers["X-XSSGuard-Test"] = "Day4"
+    response.headers["X-XSSGuard-Test"] = "Name"
     return response
 
 @app.route("/set_cookie")
 def set_cookie():
     response=make_response("Cookie has been set")
-    response.set_cookie("Username", "Day4")
+    response.set_cookie("Username", "Name")
     return response
 @app.route("/set_session")
 def set_session():
