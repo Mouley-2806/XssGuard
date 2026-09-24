@@ -15,7 +15,7 @@ def submit():
 
 @app.route("/search")
 def search():
-    query = request.args.get("q")
+    query = request.args.get("r")
     print("Query parameter:", query)
     response = make_response(f"You searched for: {query}")
     response.headers["X-XSSGuard-Test"] = "Name"
