@@ -28,7 +28,7 @@ def set_cookie():
     return response
 @app.route("/set_session")
 def set_session():
-    session["username"]="Xss"
+    session["username"]="Mouley"
     return "session has been set"
 
 @app.route("/get_session")
