@@ -9,7 +9,7 @@ def home():
 
 @app.route("/submit", methods=["POST"])
 def submit():
-    username = request.form.get("usename","").strip()
+    username = request.form.get("username","").strip()
     if not username:
         return render_template(
             "result.html",
