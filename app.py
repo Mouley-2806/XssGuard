@@ -9,9 +9,19 @@ def home():
 
 @app.route("/submit", methods=["POST"])
 def submit():
-    username = request.form["username"]
+    username = request.form.get("usename","").strip()
+    if not username:
+        return render_template(
+            "result.html",
+            user_input="",
+            error="Please enter a valid username"
+        )
     print(username)
-    return render_template("result.html", user_input=username)
+    return render_template(
+        "result.html", 
+        user_input=username,
+        error=None
+        )
 
 @app.route("/search")
 def search():

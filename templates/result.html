@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XssGuard</title>
+    <title>XssGuard - Result</title>
 </head>
 <body>
     <h1>Your Input</h1>
-    <p>{{ user_input }}</p>
+
+    {% if error %}
+        <p>{{ error }}</p>
+    {% else %}
+        <p>{{ user_input }}</p>
+    {% endif %}
+
+    <a href="/">Go back</a>
 </body>
 </html>
