@@ -29,13 +29,13 @@ XssGuard is a beginner-friendly Flask project for learning web application secur
 3. Install Flask:
 
    ```bash
-   python -m pip install Flask
+   py -m pip install Flask
    ```
 
 4. Start the application:
 
    ```bash
-   python app.py
+   py app.py
    ```
 
 5. Open `http://127.0.0.1:5000` in a browser.
