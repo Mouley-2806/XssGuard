@@ -1,3 +1,11 @@
 venv/
 __pycache__/
 *.pyc
+.env
+.env.*
+!.env.example
+instance/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
